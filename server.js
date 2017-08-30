@@ -9,33 +9,8 @@ var config={
     port:'5432',
     password:process.env.DB_PASSWORD
 };
-
-
 var app = express();
 app.use(morgan('combined'));
-var articles={
-   'article-one':
-   {title:'article-one, sanjusha rayaprolu',
-    heading:'article one',
-    date:'august 9th,2017',
-    content:` <p>
-                this is the content for my first article.
-                </p>`
-},
-'article-two':{title:'article-two, sanjusha rayaprolu',
-    heading:'article two',
-    date:'august 9th,2017',
-    content:` <p>
-                this is the content for my second article.
-                </p>`  
-             },
-'article-three':{title:'article-three, sanjusha rayaprolu',
-    heading:'article three',
-    date:'august 9th,2017',
-    content:` <p>
-                this is the content for my third article.
-                </p>`}
-};
 function createtemplate(data)
 {
     var title=data.title;

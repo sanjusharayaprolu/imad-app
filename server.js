@@ -76,7 +76,6 @@ app.post('/create-user',function(req,res){
             res.send('user successfully created' + username);
         }
     });
-  var dbString=hash(password,salt);  
 });
 var pool= new Pool(config);
 app.get('/test-db',function(req,res)
